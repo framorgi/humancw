@@ -11,7 +11,7 @@ namespace humancw::audio {
 class AudioEngine {
 public:
     /// Callback invoked by PortAudio to fill each audio buffer.
-    /// @param out    Float32 mono output buffer (frames samples).
+    /// @param out    Float32 mono output buffer (contains `frames` float samples).
     /// @param frames Number of samples to fill.
     using OutputCallback = std::function<void(float* out, std::size_t frames)>;
 

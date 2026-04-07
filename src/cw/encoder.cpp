@@ -43,7 +43,9 @@ std::vector<Symbol> Encoder::encode(const std::string& text) const {
             continue;
         }
 
-        const char*  pattern = morse_pattern(static_cast<char>(std::toupper(static_cast<unsigned char>(raw))));
+        const unsigned char uc      = static_cast<unsigned char>(raw);
+        const char          upper   = static_cast<char>(std::toupper(uc));
+        const char*         pattern = morse_pattern(upper);
         if (!pattern) continue;
 
         if (!first_char) {
