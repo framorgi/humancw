@@ -41,6 +41,9 @@ FetchContent_MakeAvailable(portaudio)
 # ---------------------------------------------------------------------------
 add_executable(${PROJECT_NAME}
     src/main.cpp
+    src/audio/audio_engine.cpp
+    src/cw/encoder.cpp
+    src/ui/app.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
